@@ -57,7 +57,7 @@ if ($insert == true) {
     <label for="email"><br>Enter e-mail</label>
     <input class="bb" type="email" name="email" id="email" placeholder="Enter your email" required>
     <div class="card-footer text-end">
-    <button class="btn"><a href="home.html" style="text-decoration: none; color: black;">Back</a></button>
+    <button class="btn"><a href="index.html" style="text-decoration: none; color: black;">Back</a></button>
         <button type="submit" class="btn">Submit</button>
     </div>
 </form>

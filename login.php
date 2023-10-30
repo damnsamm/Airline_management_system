@@ -63,7 +63,7 @@ $conn->close();
         <label class="form_" for="form1">Password:</label>
         <input type="password" name="u_password" id="u_password" placeholder="Enter password" required>
         <button class="btn center-text">
-  <a href="home.html" style="text-decoration: none; color: black;">Back</a>
+  <a href="index.html" style="text-decoration: none; color: black;">Back</a>
     </button>
 
         <button type="submit" class="btn" style="width: 70px;">Login</button>
