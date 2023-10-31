@@ -1,30 +1,3 @@
-<?php
-$db_host = "localhost:3308";
-$db_user = "root";
-$db_password = "";
-$db_name = "airio_";
-
-// Create a database connection
-$conn = new mysqli($db_host, $db_user, $db_password, $db_name);
-
-// Check for connection errors
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Call the stored procedure
-$result1 = $conn->query("CALL Num_of_employees()");
-
-if ($result1) {
-    // Fetch the result
-    $row1 = $result1->fetch_assoc();
-    $employee_count = $row1['Total_employees'];
-} else {
-    // Handle error
-    echo "Error: " . $conn->error;
-}
-$conn->close();
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +31,7 @@ $conn->close();
         padding: 10px 20px; /* Increase padding for a bigger button */
         font-size: 16px; /* Increase font size */
         border: none;
-        border-radius: 5px;
+        border-radius: 5px;sty
         cursor: pointer;
         }
     </style>
@@ -67,7 +40,7 @@ $conn->close();
     <header>
         <h1>Employee List</h1>
     </header>
-    <button class="btn"><a href="admin_h.html" style="text-decoration: none; color: white;">Back</a></button>
+    <button class="btn"><a href="admin_h.html" le="text-decoration: none; color: white;">Back</a></button>
     <main>
         <section class="flight-list">
             <?php
@@ -134,8 +107,20 @@ $conn->close();
             } else {
                 echo "<tr><td colspan='13'>No record available.</td></tr>";
             }
-
+            
             echo "</table>";
+        
+
+            $result1 = $conn->query("CALL em_count()");
+
+         if ($result1) {
+    // Fetch the result
+    $row1 = $result1->fetch_assoc();
+    $employee_count = $row1['Total_employees'];
+      } else {
+    // Handle error
+    echo "Error: " . $conn->error;
+      }
 
             // Close the database connection
             $conn->close();
@@ -143,10 +128,9 @@ $conn->close();
         </section>
     </main>
     <button class="btn" style="margin-right: 1090px;"><a href="employee_details.php" style="text-decoration: none; color: white;">Add employee</a></button>
-    <div id="employee_count">Total Employees: <?php echo $employee_count; ?></div>
+    <div id="employee_count" style="text-decoration: none; border-radius: 6px; background: black; color: white;">Total Employees: <?php echo $employee_count; ?></div>
     <button class="btn"><a href="employee_inirec.php" style="text-decoration: none; color: white;">Initial record</a></button>
    
-
 </body>
 </html>
 
