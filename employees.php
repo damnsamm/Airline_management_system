@@ -113,10 +113,14 @@
             $employee_count = 0;
             $result1 = $conn->query("CALL Num_of_employees()");
 
-       
+         if ($result1) {
+    // Fetch the result
     $row = $result1->fetch_assoc();
     $employee_count = $row['Total_employees'];
-     
+      } else {
+    // Handle error
+    echo "Error: " . $conn->error;
+      }
 
             // Close the database connection
             $conn->close();
