@@ -128,7 +128,7 @@
         </section>
     </main>
     <button class="btn" style="margin-right: 1090px;"><a href="employee_details.php" style="text-decoration: none; color: white;">Add employee</a></button>
-    <div id="Total_employees" style="text-decoration: none; border-radius: 6px; background: black; color: white;">Total Employees: <?php echo $employee_count; ?></div>
+    <div id="employee_count" style="text-decoration: none; border-radius: 6px; background: black; color: white;">Total Employees: <?php echo $employee_count; ?></div>
     <button class="btn"><a href="employee_inirec.php" style="text-decoration: none; color: white;">Initial record</a></button>
 </body>
 </html>
