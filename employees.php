@@ -26,10 +26,10 @@
             background-color: #f2f2f2;
         }
         .btn{
-        background-color: grey; /* Change the button color */
-        color: white; /* Change the text color */
-        padding: 10px 20px; /* Increase padding for a bigger button */
-        font-size: 16px; /* Increase font size */
+        background-color: grey; 
+        color: white; 
+        padding: 10px 20px; 
+        font-size: 16px;
         border: none;
         border-radius: 5px;sty
         cursor: pointer;
@@ -110,13 +110,13 @@
             
             echo "</table>";
         
-
-            $result1 = $conn->query("CALL em_count()");
+            $employee_count = 0;
+            $result1 = $conn->query("CALL Num_of_employees()");
 
          if ($result1) {
     // Fetch the result
-    $row1 = $result1->fetch_assoc();
-    $employee_count = $row1['Total_employees'];
+    $row = $result1->fetch_assoc();
+    $employee_count = $row['Total_employees'];
       } else {
     // Handle error
     echo "Error: " . $conn->error;
