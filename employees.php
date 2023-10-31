@@ -116,7 +116,7 @@
          if ($result1) {
     // Fetch the result
     $row = $result1->fetch_assoc();
-    $employee_count = $row['Total_employees'];
+    $employee_count = $row['em_count'];
       } else {
     // Handle error
     echo "Error: " . $conn->error;
@@ -128,7 +128,7 @@
         </section>
     </main>
     <button class="btn" style="margin-right: 1090px;"><a href="employee_details.php" style="text-decoration: none; color: white;">Add employee</a></button>
-    <div id="employee_count" style="text-decoration: none; border-radius: 6px; background: black; color: white;">Total Employees: <?php echo $employee_count; ?></div>
+    <div id="em_count" style="text-decoration: none; border-radius: 6px; background: black; color: white;">Total Employees: <?php echo $employee_count; ?></div>
     <button class="btn"><a href="employee_inirec.php" style="text-decoration: none; color: white;">Initial record</a></button>
    
 </body>
