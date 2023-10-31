@@ -81,6 +81,7 @@
             echo "<th>Contact Number</th>";
             echo "<th>Email Address</th>";
             echo "<th>Employee Type</th>";
+            echo "<th>Employee Salary</th>";
             echo "<th>Edit</th>";
             echo "<th>Delete</th>";
             echo "</tr>";
@@ -94,6 +95,7 @@
                     echo "<td>{$row['contact_no']}</td>";
                     echo "<td>{$row['email']}</td>";
                     echo "<td>{$row['type']}</td>";
+                    echo "<td>{$row['salary']}</td>";
                 
         echo "<td><a href='edit_em.php?e_id={$row['e_id']}' class='edit-button'>Edit</a></td>";
                   
