@@ -40,7 +40,7 @@
     <header>
         <h1>Employee List</h1>
     </header>
-    <button class="btn"><a href="admin_h.html" le="text-decoration: none; color: white;">Back</a></button>
+    <button class="btn"><a href="admin_h.html" style="text-decoration: none; color: white;">Back</a></button>
     <main>
         <section class="flight-list">
             <?php
