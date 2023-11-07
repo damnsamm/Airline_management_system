@@ -20,7 +20,7 @@ $age=$_POST['age'];
 $gender=$_POST['gender'];
 $contact_no=$_POST['contact_no'];
 $email=$_POST['email'];
-$sql= "INSERT INTO `passenger_reg` (`u_name`, `u_password`, `dob`, `age`, `gender`, `contact_no`, `email`) VALUES ('$u_name', '$u_password', '$dob', '$age', '$gender', '$contact_no', '$email');";
+$sql= "INSERT INTO `passenger_reg` (`u_name`, `u_password`, `dob`, `dob`, `age`, `gender`, `contact_no`, `email`) VALUES ('$u_name', '$u_password', '$dob', '$dob', '$age', '$gender', '$contact_no', '$email');";
 
      if($conn->query($sql)== true){
        // echo "Successfully registered";
@@ -55,8 +55,8 @@ $sql= "INSERT INTO `passenger_reg` (`u_name`, `u_password`, `dob`, `age`, `gende
         <label class="form_" for="form2">User_name:</label>
         <input type="text" name="u_name" id="u_name" placeholder="Enter user_name" required>
         <label class="form_" for="form2">Password:</label>
-        <input type="text" name="u_password" id="password" placeholder="Enter password" required>
-        <label class="form-" for="form2">Date Of Birth</label>
+        <input type="text" name="u_password" id="u_password" placeholder="Enter password" required>
+        <label class="form_" for="form2">Date Of Birth:</label>
         <input type="date" name="dob" id="dob">
         <label class="form_" for="form2">Age:</label>
         <input type="text" name="age" id="age" placeholder="Enter your age">
