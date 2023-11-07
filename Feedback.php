@@ -42,7 +42,7 @@ if (isset($_POST['name'])) {
 <body>
 <?php
 if ($insert == true) {
-    echo "<p class='submit-msg'>Successfully submitted!</p>";
+    echo "<p class='submit-msg' style='color: white;'>Successfully submitted!</p>";
 }
 ?>
 <form class="px-2" action="feedback.php" method="post">
