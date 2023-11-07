@@ -6,6 +6,7 @@
 -- Generation Time: Nov 01, 2023 at 04:28 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
+CREATE DATABASE "airio_";
 
 CREATE DATABASE airio_;
 

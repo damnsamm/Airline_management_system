@@ -20,7 +20,7 @@ $age=$_POST['age'];
 $gender=$_POST['gender'];
 $contact_no=$_POST['contact_no'];
 $email=$_POST['email'];
-$sql= "INSERT INTO `passenger_reg` (`u_name`, `u_password`, `dob`, `age`, `gender`, `contact_no`, `email`) VALUES ('$u_name', '$u_password', '$dob', '$age', '$gender', '$contact_no', '$email');";
+$sql= "INSERT INTO `passenger_reg` (`u_name`, `u_password`, `dob`, `dob`, `age`, `gender`, `contact_no`, `email`) VALUES ('$u_name', '$u_password', '$dob', '$dob', '$age', '$gender', '$contact_no', '$email');";
 
      if($conn->query($sql)== true){
        // echo "Successfully registered";
