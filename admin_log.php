@@ -52,9 +52,61 @@ $conn->close();
     <link rel="stylesheet" href="css/style_l.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+
+    input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 16px;
+  }
+
+  input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 16px;
+
+   
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.back{
+    background-color: #ccc;
+    color: #333;
+}
+
+
+.submit {
+    background-color: #0074d9;
+    color: #fff;
+}
+
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+button:active {
+    transform: translateY(1px);
+}
+
+  }
+    </style>
 </head>
 <body>
-    <img class="log" src="images/admin_log.jpg" alt="login">
+    <img class="log" src="../images/admin_log.jpg" alt="login">
     <div class="container">
     <h1>Login</h1>
     <form action="" method="post">
@@ -62,8 +114,8 @@ $conn->close();
         <input type="text" name="a_name" id="a_name" placeholder="Enter username" required>
         <label class="form_" for="form1">Password:</label>
         <input type="password" name="a_password" id="a_password" placeholder="Enter password" required>
-        <button type="button" class="btn" onclick="goBack()">Back</button>
-        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn back" onclick="goBack()">Back</button>
+        <button type="submit" class="btn submit">Login</button>
     </form>
     </div>
     <script>
