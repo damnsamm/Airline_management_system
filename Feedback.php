@@ -42,14 +42,14 @@ if (isset($_POST['name'])) {
 <body>
 <?php
 if ($insert == true) {
-    echo "<p class='submit-msg'>Successfully submitted!</p>";
+    echo "<p class='submit-msg' style='color: white;'>Successfully submitted!</p>";
 }
 ?>
 <form class="px-2" action="feedback.php" method="post">
 <div class="form-outline mb-4">
         <p><strong>How was your experience?</strong></p>
         <textarea class="form-control" id="que_1" name="que_1" rows="2" placeholder="Your Answer"></textarea>
-        <p><strong>What do you think we should include to make this better experience?:</strong></p>
+        <p><strong>What do you think we should include to make this better experience?</strong></p>
         <textarea class="form-control" id="que_2" name="que_2" rows="6" placeholder="Your Feedback"></textarea>
     </div>
     <label for="name">Enter name:</label>

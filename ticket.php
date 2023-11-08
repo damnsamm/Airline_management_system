@@ -10,7 +10,7 @@ if (isset($_SESSION['u_name'])) {
     $conn = mysqli_connect("localhost:3308", "root", "", "airio_");
 
     // Query the database to fetch the user's ticket information
-    $query = "SELECT * FROM ticket_data WHERE u_name = '$u_name';";
+    $query = "SELECT * FROM ticket_data_1 WHERE u_name = '$u_name';";
     $result = mysqli_query($conn, $query);
 
     if ($result && mysqli_num_rows($result) > 0) {
@@ -82,14 +82,14 @@ if (isset($_SESSION['u_name'])) {
                 <div class="ticket-info">
                     <table>
                         <tr>
-                            <td><strong>Book id:</strong> <?php echo $ticket_data['book_id']; ?></td>
+                            <td><strong>Book id:</strong> <?php echo $ticket_data['passenger_id']; ?></td>
                         </tr>
                         <tr>
                             <td><strong>Name:</strong> <?php echo $ticket_data['name']; ?></td>
                             <td><strong>Terminal:</strong>1</td>
                         </tr>
                         <tr>
-                            <td><strong>Origin:</strong> <?php echo $ticket_data['origin']; ?></td>
+                            <td><strong>Origin:</strong> <?php echo $ticket_data['d_city']; ?></td>
                             <td><strong>Destination:</strong> <?php echo $ticket_data['destination']; ?></td>
                         </tr>
                         <tr>

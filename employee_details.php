@@ -16,8 +16,9 @@ if (!$conn) {
                 $contact_no =$_POST["contact_no"];
                 $email = $_POST["email"];
                 $type = $_POST["type"];
+                $salary = $_POST["salary"];
 
-$sql= "INSERT INTO `employees` (`name`, `dob`, `contact_no`, `email`, `type`) VALUES ('$name', '$dob', '$contact_no', '$email', '$type');";
+$sql= "INSERT INTO `employees` (`name`, `dob`, `contact_no`, `email`, `type`, `salary`) VALUES ('$name', '$dob', '$contact_no', '$email', '$type', '$salary');";
 
      if($conn->query($sql)== true){
        $insert= true;
@@ -63,6 +64,8 @@ $conn->close();
         <option value="Hostess">Hostess</option>
         <option value="Worker">Worker</option>
       </select><br>
+      <label class="form_" for="form2">Enter Emplyee Salary:</label><br>
+        <input type="number" name="salary" id="salary" placeholder="Salary" required><br>
         <button type="submit" class="btn" style="width: 70px;">Add</button>
     </form>
     </div>

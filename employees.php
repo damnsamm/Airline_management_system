@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,12 +26,12 @@
             background-color: #f2f2f2;
         }
         .btn{
-        background-color: grey; /* Change the button color */
-        color: white; /* Change the text color */
-        padding: 10px 20px; /* Increase padding for a bigger button */
-        font-size: 16px; /* Increase font size */
+        background-color: grey; 
+        color: white; 
+        padding: 10px 20px; 
+        font-size: 16px;
         border: none;
-        border-radius: 5px;
+        border-radius: 5px;sty
         cursor: pointer;
         }
     </style>
@@ -49,10 +50,8 @@
             $password = "";
             $dbname = "airio_";
 
-            // Create a connection
             $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-            // Check connection
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
             }
@@ -81,6 +80,7 @@
             echo "<th>Contact Number</th>";
             echo "<th>Email Address</th>";
             echo "<th>Employee Type</th>";
+            echo "<th>Employee Salary</th>";
             echo "<th>Edit</th>";
             echo "<th>Delete</th>";
             echo "</tr>";
@@ -94,6 +94,7 @@
                     echo "<td>{$row['contact_no']}</td>";
                     echo "<td>{$row['email']}</td>";
                     echo "<td>{$row['type']}</td>";
+                    echo "<td>{$row['salary']}</td>";
                 
         echo "<td><a href='edit_em.php?e_id={$row['e_id']}' class='edit-button'>Edit</a></td>";
                   
@@ -104,18 +105,39 @@
             } else {
                 echo "<tr><td colspan='13'>No record available.</td></tr>";
             }
-
+            
             echo "</table>";
+        
+            $result1 = $conn->query("SET @p0='';");
+
+            // Fetch the result from the user-defined variable @p0
+            if ($result1) {
+                $conn->next_result();
+
+                $result = $conn->query("CALL `Num_of_employees`(@p0);");
+                if ($result) {
+                    // Fetch the result
+                    $row = $result->fetch_assoc();
+                    $Total_employees = $row['Total_employees'];
+                } else {
+                    // Handle error
+                    echo "Error fetching result: " . $conn->error;
+                }
+            } else {
+                // Handle error
+                echo "Error calling stored procedure: " . $conn->error;
+            }
 
             // Close the database connection
             $conn->close();
             ?>
         </section>
     </main>
-    <button class="btn" style="margin-right: 1090px;"><a href="employee_details.php" style="text-decoration: none; color: white;">Add employee</a></button>
-    <button class="btn"><a href="employee_inirec.php" style="text-decoration: none; color: white;">Initial record</a></button>
-   
-
+    <button class="btn" style="margin-right: 1050px;"><a href="employee_details.php" style="text-decoration: none; color: white;">Add employee</a></button>
+    <button class="btn"><a href="employee_inirec.php" style="text-decoration: none; color: white;">Employees record</a></button>
+    <footer>
+    <div class="b" id="Total_employees"><strong>Total Employees: </strong><?php echo $Total_employees; ?></div>
+        </footer>
 </body>
 </html>
 

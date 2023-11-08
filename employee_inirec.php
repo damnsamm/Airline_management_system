@@ -81,6 +81,7 @@
             echo "<th>Contact Number</th>";
             echo "<th>Email Address</th>";
             echo "<th>Employee Type</th>";
+            echo "<th>Employee Salary</td>";
             echo "<th>Date_Time</th>";
             echo "</tr>";
 
@@ -93,6 +94,7 @@
                     echo "<td>{$row['contact_no']}</td>";
                     echo "<td>{$row['email']}</td>";
                     echo "<td>{$row['type']}</td>";
+                    echo "<td>{$row['salary']}</td>";
                     echo "<td>{$row['date_time']}</td>";
                 
                     echo "</tr>";

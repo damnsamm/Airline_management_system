@@ -15,13 +15,12 @@ if (!$conn) {
 
 $u_name=$_POST['u_name'];
 $u_password=$_POST['u_password'];
+$dob=$_POST['dob'];
 $age=$_POST['age'];
 $gender=$_POST['gender'];
 $contact_no=$_POST['contact_no'];
 $email=$_POST['email'];
-$sql= "INSERT INTO `passenger_reg` (`u_name`, `u_password`, `age`, `gender`, `contact_no`, `email`,
-     `date_time`) VALUES ('$u_name', '$u_password', '$age', '$gender', '$contact_no', '$email', 
-     CURRENT_TIMESTAMP);";
+$sql= "INSERT INTO `passenger_reg` (`u_name`, `u_password`, `dob`, `dob`, `age`, `gender`, `contact_no`, `email`) VALUES ('$u_name', '$u_password', '$dob', '$dob', '$age', '$gender', '$contact_no', '$email');";
 
      if($conn->query($sql)== true){
        // echo "Successfully registered";
@@ -56,13 +55,15 @@ $sql= "INSERT INTO `passenger_reg` (`u_name`, `u_password`, `age`, `gender`, `co
         <label class="form_" for="form2">User_name:</label>
         <input type="text" name="u_name" id="u_name" placeholder="Enter user_name" required>
         <label class="form_" for="form2">Password:</label>
-        <input type="text" name="u_password" id="pwd" placeholder="Enter password" required>
+        <input type="text" name="u_password" id="u_password" placeholder="Enter password" required>
+        <label class="form_" for="form2">Date Of Birth:</label>
+        <input type="date" name="dob" id="dob">
         <label class="form_" for="form2">Age:</label>
         <input type="text" name="age" id="age" placeholder="Enter your age">
         <label class="form_" for="form2">Gender:</label>
         <input type="text" name="gender" id="gender" placeholder="Enter gender(F/M)">
         <label class="form_" for="form2">Contact number:</label>
-        <input type="number" name="contact_no" id="Contact" placeholder="Enter your contact number">
+        <input type="number" name="contact_no" id="contact_no" placeholder="Enter your contact number">
         <label class="form_" for="form2">E-mail:</label>
         <input type="email" name="email" id="email" placeholder="Enter your email">
         <button class="btn"><a href="login.php" style="text-decoration: none; color: black;">Back</a></button>

@@ -14,15 +14,15 @@ if (!$conn) {
 
 if (isset($_POST['name'])) {
   $name = $_POST['name'];
-  $origin = $_POST['origin'];
+  $flight_id = $_POST['flight_id'];
   $destination = $_POST['destination'];
   $date = $_POST['date'];
   $time = $_POST['time'];
   $no_seats = $_POST['no_seats'];
   $class = $_POST['class'];
 
-  $sql = "INSERT INTO `booking` (`name`, `origin`, `destination`, `journey_date`, `journey_time`, `num_seats`, `class`) VALUES 
-          ('$name', '$origin', '$destination', '$date', '$time', '$no_seats', '$class');";
+  $sql = "INSERT INTO `booking` (`name`, `flight_id`, `destination`, `journey_date`, `journey_time`, `num_seats`, `class`) VALUES 
+          ('$name', '$flight_id', '$destination', '$date', '$time', '$no_seats', '$class');";
 
   if ($conn->query($sql) === true) {
     $insert = true;
@@ -55,8 +55,8 @@ if (isset($_POST['name'])) {
     <form action="" method="post">
     <label class="form_" for="name">Enter name:</label><br> 
     <input type="text" name="name" id="name" placeholder="Name" required><br>
-      <label class="form_" for="origin">From:</label><br>
-      <select id="origin" name="origin" required>
+    <label class="form_" for="flight_id">From:</label><br>
+      <select id="flight_id" name="flight_id" required>
       <option value="">Select Origin</option>
         <?php
         $sql = "SELECT flight_id, d_city FROM flight_details;";
@@ -65,12 +65,12 @@ if (isset($_POST['name'])) {
         // Populate the dropdown menu with options
         if ($result->num_rows > 0) {
           while ($row = $result->fetch_assoc()) {
-            echo '<option value="' . $row["d_city"] . '">' . $row["d_city"] . '</option>';
+            echo '<option value="' . $row["flight_id"] . '">' . $row["flight_id"] . '-' . $row["d_city"] . '</option>';
           }
         }
         ?>
       </select><br>
-
+   
       <label class="form_" for="destination">To:</label><br>
       <select id="destination" name="destination" required>
       <option value="">Select Destination</option>
@@ -115,9 +115,9 @@ if (isset($_POST['name'])) {
       <label class="form_" for="class">Select Flight Class:</label><br>
       <select id="class" name="class" required>
       <option value="">Select Class</option>
-        <option value="Economy">Economy</option>
-        <option value="Premium Economy">Premium Economy</option>
-        <option value="Business">Business</option>
+        <option value="Economy">Economy Class</option>
+        <option value="Premium Economy">Premium Economy Class</option>
+        <option value="Business">Business Class</option>
         <option value="First Class">First Class</option>
       </select><br>
       <button type="submit" class="btn">Book</button>

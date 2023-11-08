@@ -78,13 +78,15 @@
                 $contact_no =$_POST["contact_no"];
                 $email = $_POST["email"];
                 $type = $_POST["type"];
+                $salary = $_Post["salry"];
                 
                 $updateSql = "UPDATE employees SET
                     name = '$name',
                     dob = '$dob',
                     contact_no = '$contact_no',
                     email = '$email',
-                    type = '$type'
+                    type = '$type',
+                    salary = '$salary'
                     WHERE e_id = $e_id;";
 
                 if (mysqli_query($conn, $updateSql) === TRUE) {
@@ -110,6 +112,7 @@
                 echo "<tr><td>Contact Number:</td><td><input type='number' name='contact_no' value='{$row['contact_no']}'></td></tr>";
                 echo "<tr><td>Email:</td><td><input type='email' name='email' value='{$row['email']}'></td></tr>";
                 echo "<tr><td>Employee Type:</td><td><input type='text' name='type' value='{$row['type']}'></td></tr>";
+                echo "<tr><td>Employee Salary:</td><td><input type='number' name='salary' value='{$row['salary']}'></td></tr>";
                 echo "</table>";
                 echo "<div class='center'><input type='submit' value='Save Changes' class='save-changes-button'></div><br>";
                 echo "</form>";
