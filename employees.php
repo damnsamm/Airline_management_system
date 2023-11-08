@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/icon_image.png" />
     <title>Employee List</title>
     <link rel="stylesheet" href="css/style_fli_l.css">
     <style>
@@ -28,10 +29,10 @@
         .btn{
         background-color: grey; 
         color: white; 
-        padding: 10px 20px; 
+        padding: 8px 18px; 
         font-size: 16px;
         border: none;
-        border-radius: 5px;sty
+        border-radius: 6px;sty
         cursor: pointer;
         }
     </style>
@@ -133,7 +134,7 @@
             ?>
         </section>
     </main>
-    <button class="btn" style="margin-right: 1050px;"><a href="employee_details.php" style="text-decoration: none; color: white;">Add employee</a></button>
+    <button class="btn" style="margin-right: 1057px;"><a href="employee_details.php" style="text-decoration: none; color: white;">Add employee</a></button>
     <button class="btn"><a href="employee_inirec.php" style="text-decoration: none; color: white;">Employees record</a></button>
     <footer>
     <div class="b" id="Total_employees"><strong>Total Employees: </strong><?php echo $Total_employees; ?></div>

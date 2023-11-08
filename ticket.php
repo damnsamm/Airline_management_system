@@ -26,6 +26,7 @@ if (isset($_SESSION['u_name'])) {
         <html lang="en">
         <head>
             <meta charset="UTF-8">
+            <link rel="shortcut icon" href="./images/icon_image.png" />
             <style>
         body {
             background-color: white;

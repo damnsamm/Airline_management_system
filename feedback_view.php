@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/icon_image.png" />
     <title>Feedback</title>
     <style>
         body {
@@ -51,7 +52,7 @@
         }
 
         .btn {
-            background-color: grey;
+            background-color: gray;
             color: white;
             padding: 10px 20px;
             font-size: 16px;
@@ -78,7 +79,7 @@
         <h1>View Feedbacks</h1>
     </header>
     <div class="container">
-        <button class="btn"><a href="admin_h.html" style="text-decoration: none; color: black;">Back</a></button>
+        <button class="btn"><a href="admin_h.html" style="text-decoration: none; color: white;">Back</a></button>
         <main>
             <section class="feedback-list">
                 <?php

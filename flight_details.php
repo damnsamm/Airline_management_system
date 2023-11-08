@@ -38,11 +38,12 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/icon_image.png" />
     <title>Add Flight</title>
     <link rel="stylesheet" href="css/style_fli_d.css">
 </head>
 <body>
- <button><a href="admin_h.html" style="text-decoration: none; color: black;">Back</a></button>   
+ <button><a href="admin_h.html" style="text-decoration: none; color: black; border-radius: 6px;">Back</a></button>   
     <img class="reg" src="images/flight_details.png" alt="flight_details">
     <div class="container">
     <h1>Add Flight</h1>

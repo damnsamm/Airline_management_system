@@ -38,6 +38,7 @@ if (isset($_POST['name'])) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/icon_image.png" />
   <link rel="stylesheet" href="css/style_b.css">
   <title>Flight Booking</title>
 </head>

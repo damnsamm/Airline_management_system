@@ -36,6 +36,7 @@ if (isset($_POST['name'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/icon_image.png" />
     <link rel="stylesheet" href="css/style_f.css">
     <title>Feedback</title>
 </head>
@@ -57,7 +58,7 @@ if ($insert == true) {
     <label for="email"><br>Enter e-mail</label>
     <input class="bb" type="email" name="email" id="email" placeholder="Enter your email" required>
     <div class="card-footer text-end">
-    <button class="btn"><a href="index.html" style="text-decoration: none; color: black;">Back</a></button>
+    <button class="btn"><a href="index.html" style="text-decoration: none; color: white; font-size: 15px;">Back</a></button>
         <button type="submit" class="btn">Submit</button>
     </div>
 </form>

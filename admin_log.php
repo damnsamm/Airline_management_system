@@ -48,11 +48,18 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/icon_image.png" />
     <title>Admin login</title>
     <link rel="stylesheet" href="css/style_l.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
+         body {
+            background-size: cover; /* Adjust the size of the background image to cover the entire viewport */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            margin: 0px;
+            padding: 0px;
+        }
 
     input[type="text"] {
     padding: 10px;
@@ -106,7 +113,7 @@ button:active {
     </style>
 </head>
 <body>
-    <img class="log" src="../images/admin_log.jpg" alt="login">
+    <img class="log" src="images/admin_log.jpg" alt="login">
     <div class="container">
     <h1>Login</h1>
     <form action="" method="post">
